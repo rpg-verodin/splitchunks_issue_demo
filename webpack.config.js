@@ -33,16 +33,5 @@ module.exports = {
     ]
   },
   plugins: [
-  ],
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        react: {
-          test: /[\\/]node_modules[\\/](react|react-dom|react-transition-group|prop-types)[\\/]/,
-          name: 'react',
-          chunks: 'all',
-        },
-      }
-    }
-  }
+  ]
 }
