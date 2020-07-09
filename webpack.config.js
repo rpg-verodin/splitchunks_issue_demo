@@ -1,4 +1,3 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var webpack = require('webpack')
 var path = require('path')
 module.exports = {
@@ -20,7 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: [/node_modules/, /pdfmake.js$/],
+        exclude: [/node_modules/],
         use: {
           loader: 'babel-loader'
         }
@@ -29,12 +28,11 @@ module.exports = {
   },
   resolve: {
     modules: [
-      path.resolve(__dirname, './build/ui_components'),
+      path.resolve(__dirname, './components'),
       'node_modules'
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
   ],
   optimization: {
     splitChunks: {
