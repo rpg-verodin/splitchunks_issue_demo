@@ -1,0 +1,26 @@
+{
+  "presets": [
+    ["@babel/preset-env"],
+    ["@babel/preset-react"]
+  ],
+  "plugins": [
+    ["@babel/transform-computed-properties"],
+    ["@babel/transform-react-display-name"],
+    ["@babel/transform-runtime", { "corejs": 3, "helpers": true, "regenerator": true }],
+    ["@babel/syntax-dynamic-import"],
+    ["@babel/transform-arrow-functions", { "spec": true }],
+    ["@babel/transform-spread"],
+    ["@babel/proposal-object-rest-spread"],
+    ["@babel/proposal-decorators", { "legacy": true }],
+    ["@babel/proposal-class-properties", { "loose" : true }],
+    ["@babel/plugin-transform-classes"]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["transform-remove-debugger"]
+      ]
+    }
+  }
+}
+
